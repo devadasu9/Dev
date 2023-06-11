@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tax Filing Application</title>
+  <style>
+    /* Add some basic styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tax Filing Application</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="Phone number">Phone number:</label>
+    <input type="text" id="Phone number" name="Phone number" required>
+
+    <label for="Address">Address:</label>
+    <input type="text" id="Address" name="Address" required>
+
+    <label for="Occupation">Occupation:</label>
+    <select id="Occupation" name="Occupation" required>
+     <label for="Salary Per Annum">Salary Per Annum:</label>
+    <select id="Salary Per Annum" name="Salary Per Annum" required>
+       <label for="Form 16">From 16:</label>
+    <select id="From 16" name="From 16" required>
+    </select>
+    <label for="Any one pay slip of last year">Any one pay slip of last year:</label>
+    <select id="Any one pay slip of last year" name="Any one pay slip of last year" required>
+        <option value="">Any one pay slip of last year</option>
+      <option value="1st April 2022">1st April 2022</option>
+      <option value="31st March 2023">31st March 2023</option>
+      </select >
+      <label for="Housing loan interest and principal payment certificate ">Housing loan interest and principal payment certificate :</label>
+    <select id="Housing loan interest and principal payment certificate " name="Housing loan interest and principal payment certificate " required>
+       </select >
+       <label for="Any investments made for tax planning ">Any investments made for tax planning  :</label>
+    <select id="Any investments made for tax planning  " name="Any investments made for tax planning  " required>
+<option value="">Any investments made for tax planning </option>
+      <option value="80C">80C</option>
+      <option value="80D">80D</option>
+      </select >
+        <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Add event listener for form submission
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting
+
+      // Get form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var income = document.getElementById('income').value;
+      var deductions = document.getElementById('deductions').value;
+      var filingStatus = document.getElementById('filingStatus').value;
+
+      // Perform any additional processing or calculations here
+      // You can send the data to a server using AJAX or fetch, or store it locally for further processing
+
+      // Display a success message (you can modify this based on your requirements)
+      alert('Tax filing application submitted successfully!');
+    });
+  </script>
+</body>
+</html>
